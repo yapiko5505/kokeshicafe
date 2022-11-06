@@ -97,13 +97,39 @@ header {
     list-style: none;
 }
 
+#contact-contents {
+    background-image: url(../images/aki3.JPG);
+    background-color: #e8ebe7;
+    background-blend-mode: hard-light;
+    color: #eb5a09;
+}
 
-header {
-    background-image: url(../images/ringo.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 520px;
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, .5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 240px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
 }
 
 /* タブレット、PC向け */
