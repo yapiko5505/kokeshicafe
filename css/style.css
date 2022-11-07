@@ -34,8 +34,9 @@ a img {
 }
 
 h1 {
-    margin-top: 150px;
-    margin-left: 200px;
+    margin-top: 100px;
+    margin-left: 100px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h2 {
@@ -104,6 +105,10 @@ header {
     color: #eb5a09;
 }
 
+.forms {
+    margin-top: 20px;
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -132,6 +137,10 @@ input[type="submit"] {
     line-height: 1;
 }
 
+#cafes[class="container"] {
+    margin-left: 100;
+}
+
 /* タブレット、PC向け */
 @media(min-width:768px) {
 
@@ -151,15 +160,20 @@ input[type="submit"] {
         margin: 2rem auto;
     }
 
-    #cafes h2 {
-        text-align: center;
-    }
-
     .cafes-grid {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 1rem;
     }
+
+    #location-contents {
+        display: flex;
+    }
+
+    .location-map {
+        margin-left: 100px;
+    }
+
 
 }
