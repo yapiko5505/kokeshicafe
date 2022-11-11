@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION["errors"])) {
+    $errors = $_SESSION["errors"];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -54,25 +61,31 @@
             <section id="contact-contents" class="container">
                 <h2>お問い合わせ</h2>
                 <!-- お問い合わせフォーム -->
+                <?php if(isset($errors)) : ?>
+                    <?php foreach($errors as $value): ?>
+                        <?php echo $value; ?><br />
+                    <?php endforeach; ?>
+                <?php endif; ?>
                 <form method="post" action="confirm.php">
                     <div class="forms">
                         <label for="name">お名前</label>
-                        <input type="text" id="your-name" name="name">
+                        <input type="text" id="your-name" name="name" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];} ?>">
                     </div>
                     <div class="forms">
                         <label for="email">メールアドレス</label>
-                        <input type="email" id="your-email" name="email">
+                        <input type="email" id="your-email" name="email" value="<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];} ?>">
                     </div>
                     <div class="forms">
                         <label for="title">件名</label>
-                        <input type="text" id="your-title" name="title">
+                        <input type="text" id="your-title" name="title" value="<?php if(isset($_SESSION['title'])){echo $_SESSION['title'];} ?>">
                     </div>
                     <div class="forms">
                         <label for="content">お問い合わせ内容</label>
-                        <textarea id="your-content" name="content"></textarea>
+                        <textarea id="your-content" name="content"><?php if(isset($_SESSION['content'])){echo($_SESSION['content']);} ?></textarea>
                     </div>
                     <input type="submit" class="button" value="送信">
                 </form>
+                <?php session_destroy(); ?>
             </section>
 
             <!-- 場所案内 -->

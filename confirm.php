@@ -38,7 +38,7 @@
             }
         }
         $_SESSION['errors'] = $errors;
-        header("location.index.html");
+        header("location.index.php");
     }
 ?>
 <!DOCTYPE html>
@@ -70,10 +70,10 @@
                         <p><?php echo $content; ?></p>
                     </div>
                 </form>
-                <form action="index.html" method="get">
+                <form action="index.php" method="get">
                     <button>戻る</button>
                 </form>
-                <form action="submit.html" method="post">
+                <form action="submit.php" method="post">
                     <button type="submit" class="btn btn-success">送信する</button>
                 </form>
             </div>
