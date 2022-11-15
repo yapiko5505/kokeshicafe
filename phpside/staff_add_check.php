@@ -6,9 +6,11 @@
     </head>
     <body>
         <?php
+            
+            require_once('../kansu/common.php');
 
             $post=sanitize($_POST);
-            $staff_name=$post['staff_name'];
+            $staff_name=$post['name'];
             $staff_pass=$post['password'];
             $staff_pass2=$post['password2'];
 
@@ -35,8 +37,8 @@
             } else {
                 $staff_pass=md5($staff_pass);
                 echo '<form method="post" action="staff_add_done.php">';
-                echo '<input type="hidden" name="staff_name" value="'.$staff_name.'">';
-                echo '<input type="hidden" name="staff_pass" value="'.$staff_pass.'">';
+                echo '<input type="hidden" name="name" value="'.$staff_name.'">';
+                echo '<input type="hidden" name="password" value="'.$staff_pass.'">';
                 echo '<br>';
                 echo '<input type="button" onClick="history.back()" value="戻る">';
                 echo '<input type="submit" value="OK">';
