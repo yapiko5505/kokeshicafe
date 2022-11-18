@@ -34,7 +34,7 @@
                         break;
                     }
                 
-                    echo '<input type="radio" name="staffcode"'.$rec['code'].'">';
+                    echo '<input type="radio" name="code" value="'.$rec['code'].'">';
                     echo $rec['name'];
                     echo '<br>';    
                 }

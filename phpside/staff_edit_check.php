@@ -10,7 +10,7 @@
             require_once('../kansu/common.php');
 
             $post=sanitize($_POST);
-            $staff_code=$POST['code'];
+            $staff_code=$post['code'];
             $staff_name=$post['name'];
             $staff_pass=$post['password'];
             $staff_pass2=$post['password2'];

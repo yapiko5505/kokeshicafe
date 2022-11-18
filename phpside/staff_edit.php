@@ -7,7 +7,7 @@
     <body>
         <?php
 
-            $staff_code=$_GET['staffcode'];
+            $staff_code=$_GET['code'];
 
             $dsn='mysql:dbname=kokeshicafe;host=localhost;charset=utf8';
             $user='root';
@@ -15,16 +15,16 @@
 
             try
             {
-                $dsh=new PDO($dsn, $user, $password);
+                $dbh=new PDO($dsn, $user, $password);
                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 $sql='SELECT code, name FROM staffs WHERE code=?';
                 $stmt=$dbh->prepare($sql);
                 $data[]=$staff_code;
-                $Stmt->execute($data);
+                $stmt->execute($data);
 
                 $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-                $staff_name=$rec['staff_name'];
+                $staff_name=$rec['name'];
 
                 $dbh=null;
             }
