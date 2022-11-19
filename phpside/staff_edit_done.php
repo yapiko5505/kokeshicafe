@@ -59,6 +59,6 @@
         ?>
 
         <p>修正しました。<p><br><br>
-        <a href="staff_list.php">戻る</a>
+        <a href="staff_list.php">スタッフ一覧に戻る</a>
     </body>
 </html>

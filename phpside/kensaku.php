@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['login'])==false)
+    {
+        echo 'ログインされていません。';
+        echo '<a href="../phplogin/staff_login.html">ログイン画面へ</a>';
+        exit();
+    }
+    else
+    {
+        echo $_SESSION['name'];
+        echo 'さんログイン中<br>';
+        echo '<br>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -5,36 +21,10 @@
         <title>kokeshicafe</title>
     </head>
     <body>
-        <?php
-            $code=$_POST['code'];
-
-            $dsn='mysql:dbname=kokeshicafe;host=localhost';
-            $user='root';
-            $password='';
-            $dbh=new PDO($dsn, $user, $password);
-
-            $sql='SELECT * FROM forms WHERE code=?';
-            $stmt=$dbh->prepare($sql);
-            $data[]=$code;
-            $stmt->execute($data);
-
-            while(1)
-            {
-                $rec=$stmt->fetch(PDO::FETCH_ASSOC);
-                if($rec==false)
-                {
-                    break;
-                }
-
-                echo $rec['code'];
-                echo $rec['name'];
-                echo $rec['title'];
-                echo $rec['content'];
-                echo'<br>';
-            }
-
-            $dbh = null;
-
-        ?>
+        <form method="post" action="kensaku_done.php">
+            <p>お問い合わせコードを入力してください。</p>
+            <input name="code" type="text" style="width:100px"><br><br>
+            <input type="submit" value="送信">
+        </form>
     </body>
 </html>

@@ -22,14 +22,17 @@
     </head>
     <body>
         <?php
+            $code=$_POST['code'];
+
             $dsn='mysql:dbname=kokeshicafe;host=localhost';
             $user='root';
             $password='';
             $dbh=new PDO($dsn, $user, $password);
 
-            $sql='SELECT * FROM forms WHERE 1';
+            $sql='SELECT * FROM forms WHERE code=?';
             $stmt=$dbh->prepare($sql);
-            $stmt->execute();
+            $data[]=$code;
+            $stmt->execute($data);
 
             while(1)
             {
@@ -52,5 +55,3 @@
         <br><a href="../phplogin/staff_top.php">スタッフ管理に戻る</a>
     </body>
 </html>
-
-        
