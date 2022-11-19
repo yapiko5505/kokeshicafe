@@ -35,7 +35,7 @@
             session_start();
             $_SESSION['login']=1;
             $_SESSION['staff_code']=$staff_code;
-            $_SESSION['staff_name']=$rec['staff_name'];
+            $_SESSION['name']=$rec['name'];
             header('Location:staff_top.php');
             exit();
         }
