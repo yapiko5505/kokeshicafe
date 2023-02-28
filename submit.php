@@ -29,9 +29,9 @@ $mail->charset = 'UTF-8'; //文字化け防止
 $mail->setLanguage('ja', 'vandor/phpmailer/phpmailer/language/');
 
 // お問い合わせ自動保存
-$dsn = 'mysql:dbname=kokeshicafe;host=localhost';
-$user='root';
-$password='';
+$dsn = 'mysql:dbname=LAA1503403-kokeshicafe;host=mysql211.phy.lolipop.lan';
+$user='	LAA1503403';
+$password='donuts25';
 
 try {
     // お問い合わせ自動保存

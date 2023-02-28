@@ -22,9 +22,9 @@
     </head>
     <body>
         <?php
-            $dsn='mysql:dbname=kokeshicafe;host=localhost';
-            $user='root';
-            $password='';
+            $dsn='mysql:dbname=LAA1503403-kokeshicafe;host=mysql211.phy.lolipop.lan';
+            $user='LAA1503403';
+            $password='donuts25';
             $dbh=new PDO($dsn, $user, $password);
 
             $sql='SELECT * FROM forms WHERE 1';

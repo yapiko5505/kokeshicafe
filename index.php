@@ -24,7 +24,7 @@ if(isset($_SESSION["errors"])) {
                 <ul>
                     <li><a href="#cafe">カフェ紹介&ensp;</a></li>
                     <li><a href="#contact">お問い合わせ&ensp;</a></li>
-                    <li><a href="#place">場所案内&ensp;</a></li>
+                    <li><a href="#location">場所案内&ensp;</a></li>
                 </ul>
             </nav>
             <h1>kokeshicafe</h1>
