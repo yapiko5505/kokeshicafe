@@ -30,9 +30,9 @@
             $staff_name=$post['name'];
             $staff_pass=$post['password'];
 
-            $dsn='mysql:dbname=kokeshicafe;host=localhost;charset=utf8';
-            $user='root';
-            $password='';
+            $dsn='mysql:dbname=LAA1503403-kokeshicafe;host=mysql211.phy.lolipop.lan;charset=utf8';
+            $user='LAA1503403';
+            $password='donuts25';
 
             try
             {
