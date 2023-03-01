@@ -30,7 +30,7 @@ $mail->setLanguage('ja', 'vandor/phpmailer/phpmailer/language/');
 
 // お問い合わせ自動保存
 $dsn = 'mysql:dbname=LAA1503403-kokeshicafe;host=mysql211.phy.lolipop.lan';
-$user='	LAA1503403';
+$user='LAA1503403';
 $password='donuts25';
 
 try {
