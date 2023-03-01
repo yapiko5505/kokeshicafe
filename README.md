@@ -5,7 +5,7 @@
 # 使用言語、データベース
 HTML&CSS、PHP、MySQL
 
-# 制作理由
+# 制作目的
 プログラミングスクールで学んだ言語とphpmailerとvalitronを組み合わせたホームページ制作に興味があり制作しました。
 
 #[webサイトを見る]http://yapiko-kokeshicafe-2023.site/
