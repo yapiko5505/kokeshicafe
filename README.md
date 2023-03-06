@@ -8,7 +8,7 @@ HTML&CSS、PHP、MySQL
 # 制作目的
 プログラミングスクールで学んだ言語とphpmailerとvalitronを組み合わせたホームページ制作に興味があり制作しました。
 
-#[webサイトを見る]http://yapiko-kokeshicafe-2023.site/
+#[webサイトを見る]https://yapiko-kokeshicafe-2023.site/
 
 ![スクリーンショット](https://user-images.githubusercontent.com/84828867/222068127-e905db96-a0d7-4ec8-83f7-a2ab9931cac8.png)
 
